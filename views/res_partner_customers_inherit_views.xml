@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="res_partner_customers_inherit_form_inherit" model="ir.ui.view">
+            <field name="name">Res Partner Customers Inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="industry_id" position="after">
+                    <group>
+                        <field name="related_certificate_id"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="vvc_certificates_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+                            <div>
+                                <span class="text-lg text-danger fs-5">
+                                    <center>
+                                        <strong>شهادة صلاحية</strong>
+                                    </center>
+                                </span>
+                            </div>
+                            <br/><br/>    
+                            <div class="text-right">
+                                <span t-field="o.tdepartment_name"/>
+                                         / السيد اللواء مدير إدارة مرور 
+                            </div>
+                            
+                            <div class="row">
+                                <div class="mr-2 text-left">
+                                          تحريرا في  /  
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div>
+                                <center>
+                                    <strong>
+                                        .... تحيه طيبة وبعد 
+                                    </strong>
+                                </center>
+                            </div>
+                            <br/><br/>
+                            <div class="text-right">
+                                <span t-field="o.ctypes_name"/>
+                                        / أتشرف بإفادة سيادتكم بأنه تم تعديل 
+                            </div>
+                            <br/><br/>
+                            <div class="text-right">
+                                <div class="align-right">
+                                    <span t-field="o.chassis_number"/>
+                                               /شاسيه رقم 
+                                </div>
+                                
+                                <div class="align-right">
+                                    <span t-field="o.brand"/>
+                                                / الماركة 
+                                </div>
+                                <div class="align-right">
+                                    <span t-field="o.customer_name"/>
+                                               / اسم المالك 
+                                </div>
+                                <div class="align-right">
+                                               محرك رقم /
+                                    <span t-field="o.motor_number"/>
+                                </div>
+                                <div class="align-right">
+                                                موديل /
+                                    <span t-field="o.car_model"/>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="text-right">
+                                <p>
+                                    حيث أن المؤسسة معتمدة بالهيئة العامة للتنمية الصناعية ومصلحة الرقابة الصناعية ومعتمدة بإدارات المرور ولها سجل تجاري صناعي 
+                                    وبطاقة ضريبية بهذه الصفة وقد تم فحص التعديل والتكريب واللحامات والإصلاحات اللازمة طبقا لأصول الصناعة ودون اللإخلال بالتصميم
+                                    الاصلي ودون المساس بالأجزاء الجوهرية للسيارة وقد تم تجربة السيارة على الطرق المصرية ووجد أنها متزنة وهذه شهادة منا بذلك لتقديمها
+                                    للمرور والمالك مسئول مسئولية كاملة عن بيانات الشهادة فبرجاء التكرم والتفضل بالموافقة على ترخيص السيارة 
+                                </p>
+                            </div>
+                            <br/><br/>
+                            <div>
+                                <center>
+                                    <strong>
+                                      .... وتفضلوا بقبول فائق الاحترام والتقدير 
+                                    </strong>
+                                </center>
+                            </div>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+
+        <record id="ctypes_action" model="ir.actions.act_window">
+            <field name="name">Certificate Types</field>
+            <field name="res_model">vvc.ctypes</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="ctypes_form_view" model="ir.ui.view">
+            <field name="name">Certificate Types form view</field>
+            <field name="model">vvc.ctypes</field>
+            <field name="arch" type="xml">
+                <form string="Certificate Types">
+                    <sheet>
+                        <notebook name="certificate types data" string="Certificate Types Data">
+                            <page name="page1" string="Certificate Types Info">
+                                <group name="group1" string="Certificate Types Info">
+                                    <field name="name"/>
+                                    <field name="certificates_id"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ctypes_tree_view" model="ir.ui.view">
+            <field name="name">Certificate Types tree view</field>
+            <field name="model">vvc.ctypes</field>
+            <field name="arch" type="xml">
+                <tree string="Certificate Types">                
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="vvc_ctypes" name="Certificate Types" sequence="2" parent="vvc_menu" action="ctypes_action"/>
+
+    </data>
+</odoo>

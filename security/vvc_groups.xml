@@ -1,0 +1,38 @@
+<odoo>
+    <data noupdate="0">
+
+        <record id="module_category_vvc_user" model="ir.module.category">
+            <field name="name">vvc_user</field>
+        </record>
+
+        <record id="vvc_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="module_category_vvc_user"></field>
+        </record>
+
+        <record id="module_category_vvc_manager" model="ir.module.category">
+            <field name="name">vvc_manager</field>
+        </record>
+
+        <record id="vvc_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_category_vvc_manager"></field>
+        </record>
+
+
+        <record id="rule_vvc_manager" model="ir.rule">
+            <field name="name">Manager see Certificate records only</field>
+            <field name="model_id" ref="model_vvc_certificates"></field>
+            <field name="domain_force">[]</field>
+            <field name="groups" eval="[(4,ref('vvc_manager'))]" />
+        </record>
+
+        <record id="rule_vvc_user" model="ir.rule">
+            <field name="name">User see Certificate records only</field>
+            <field name="model_id" ref="model_vvc_certificates"></field>
+            <field name="domain_force">[('create_uid','=',user.id)]</field>
+            <field name="groups" eval="[(4,ref('vvc_user'))]" />
+        </record>
+
+    </data>
+</odoo>

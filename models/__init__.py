@@ -1,0 +1,1 @@
+from . import vvc_certificates, vvc_certificate_types, vvc_traffic_department, vvc_customers, vvc_brand, res_partner_customers_inherit

@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+
+        <record id="tdepartment_action" model="ir.actions.act_window">
+            <field name="name">Traffic Department</field>
+            <field name="res_model">vvc.tdepartment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="tdepartment_form_view" model="ir.ui.view">
+            <field name="name">Traffic Department form view</field>
+            <field name="model">vvc.tdepartment</field>
+            <field name="arch" type="xml">
+                <form string="Traffic Department">
+                    <sheet>
+                        <notebook name="traffic department data" string="Traffic Department Data">
+                            <page name="page1" string="Traffic Department Info">
+                                <group name="group1" string="Traffic Department Info">
+                                    <field name="name"/>
+                                    <field name="certificates_id"/>
+                                </group>
+                            </page>    
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tdepartment_tree_view" model="ir.ui.view">
+            <field name="name">Traffic Department tree view</field>
+            <field name="model">vvc.tdepartment</field>
+            <field name="arch" type="xml">
+                <tree string="Traffic Department">                
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="vvc_tdepartment" name="Traffic Department" sequence="3" parent="vvc_menu" action="tdepartment_action"/>
+
+    </data>
+</odoo>

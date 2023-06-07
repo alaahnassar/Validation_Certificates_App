@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record id="brand_action" model="ir.actions.act_window">
+            <field name="name">Brand</field>
+            <field name="res_model">vvc.brand</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="brand_form_view" model="ir.ui.view">
+            <field name="name">Brand form view</field>
+            <field name="model">vvc.brand</field>
+            <field name="arch" type="xml">
+                <form string="Brand">
+                    <sheet>
+                        <notebook name="brand data" string="Brand Data">
+                            <page name="page1" string="Brand Info">
+                                <group name="group1" string="Brand Info">
+                                    <field name="name"/>
+                                    <field name="certificates_id"/>
+                                </group>
+                            </page>    
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="brand_tree_view" model="ir.ui.view">
+            <field name="name">Brand tree view</field>
+            <field name="model">vvc.brand</field>
+            <field name="arch" type="xml">
+                <tree string="Brand">                
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

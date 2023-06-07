@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+manager_certificates_access,manager_certificates_model_access,model_vvc_certificates,vvc_manager,1,1,1,1
+manager_certificate_types_access,manager_certificate_types_model_access,model_vvc_ctypes,vvc_manager,1,1,1,1
+manager_traffic_department_access,manager_traffic_department_model_access,model_vvc_tdepartment,vvc_manager,1,1,1,1
+manager_customers_access,manager_customers_model_access,model_vvc_customers,vvc_manager,1,1,1,1
+manager_brand_access,manager_brand_model_access,model_vvc_brand,vvc_manager,1,1,1,1
+manager_logs_access,manager_logs_model_access,model_certificates_logs,vvc_manager,1,1,1,1
+
+user_certificates_access,user_certificates_model_access,model_vvc_certificates,vvc_user,1,0,1,0
+user_certificate_types_access,user_certificate_types_model_access,model_vvc_ctypes,vvc_user,1,0,0,0
+user_traffic_department_access,user_traffic_department_model_access,model_vvc_tdepartment,vvc_user,1,0,0,0
+user_customers_access,user_customers_model_access,model_vvc_customers,vvc_user,1,0,0,0
+user_brand_access,user_brand_model_access,model_vvc_brand,vvc_user,1,0,0,0
+user_logs_access,user_logs_model_access,model_certificates_logs,vvc_user,1,1,1,1

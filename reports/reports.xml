@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+    
+        <record id="certificates_report" model="ir.actions.report">
+            <field name="name">Certificates Report</field>
+            <field name="model">vvc.certificates</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">vvc.vvc_certificates_template</field>
+            <field name="report_file">vvc.vvc_certificates_template</field>
+            <field name="print_report_name">'Certificates Report'</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+        <record id="customers_action" model="ir.actions.act_window">
+            <field name="name">Customers Action</field>
+            <field name="res_model">vvc.customers</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="customers_form_view" model="ir.ui.view">
+            <field name="name">Customers Action form view</field>
+            <field name="model">vvc.customers</field>
+            <field name="arch" type="xml">
+                <form string="Customers Action">
+                    <sheet>
+                        <notebook name="customers action data" string="Customers Action Data">
+                            <page name="page1" string="Customers Action Info">
+                                <group name="group1" string="Customers Action Info">
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                    <!-- <field name="certificates_id"/> -->
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customers_tree_view" model="ir.ui.view">
+            <field name="name">Customers Action tree view</field>
+            <field name="model">vvc.customers</field>
+            <field name="arch" type="xml">
+                <tree string="Customers Action">                
+                    <field name="name"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="vvc_customers" name="Customers Action" sequence="4" parent="vvc_menu" action="customers_action"/>
+
+    </data>
+</odoo>
